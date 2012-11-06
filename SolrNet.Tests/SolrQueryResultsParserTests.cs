@@ -713,6 +713,14 @@ namespace SolrNet.Tests {
             Assert.AreEqual(new Guid("224fbdc1-12df-4520-9fbe-dd91f916eba1"), results.Match.Key);
         }
 
+        [Test]
+        public void ParseShardInfoErrors()
+        {
+            var parser = new ShardInfoResponseParser<ShardInfoResult>();
+            var response = EmbeddedResource.GetEmbeddedString(GetType(), "Resources.responseWithShardInfoError.xml");
+            var results = parser.Parse(response);
+        }
+
         public enum AEnum {
             One,
             Two,

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<response>
+
+  <lst name="responseHeader">
+    <int name="status">0</int>
+    <int name="QTime">35</int>
+    <lst name="params">
+      <str name="shards">192.168.0.147:8983/solr,192.168.0.151:8983/solr,192.168.0.152:8983/solr</str>
+      <str name="indent">on</str>
+      <str name="start">0</str>
+      <str name="q">EntityName:*</str>
+      <str name="shards.info">true</str>
+      <str name="shards.tolerant">true</str>
+      <str name="version">2.2</str>
+      <str name="rows">10</str>
+    </lst>
+  </lst>
+  <lst name="shards.info">
+    <lst name="192.168.0.151:8983/solr">
+      <long name="numFound">6490001</long>
+      <float name="maxScore">1.0</float>
+      <long name="time">12</long>
+    </lst>
+    <lst name="192.168.0.147:8983/solr">
+      <long name="numFound">7990001</long>
+      <float name="maxScore">1.0</float>
+      <long name="time">14</long>
+    </lst>
+    <lst name="192.168.0.152:8983/solr">
+      <long name="numFound">14990001</long>
+      <float name="maxScore">1.0</float>
+      <long name="time">16</long>
+    </lst>
+  </lst>
+  <result numFound="29470003" start="0">
+    <doc>
+      <str name="Key">224fbdc1-12df-4520-9fbe-dd91f916eba1</str>
+    </doc>
+  </result>
+</response>

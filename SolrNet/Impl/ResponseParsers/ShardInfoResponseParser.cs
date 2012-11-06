@@ -9,7 +9,7 @@ using System.Xml.XPath;
 
 namespace SolrNet.Impl.ResponseParsers
 {
-    class ShardInfoResponseParser<T> : ISolrResponseParser<T>
+    public class ShardInfoResponseParser<T> : ISolrResponseParser<T>
     {
         public void Parse(XDocument xml, AbstractSolrQueryResults<T> results)
         {
@@ -19,7 +19,7 @@ namespace SolrNet.Impl.ResponseParsers
 
         public void Parse(XDocument xml, SolrQueryResults<T> results)
         {
-            var rootNode = xml.XPathSelectElement("response/lst[@name='shards.Info']");
+            var rootNode = xml.XPathSelectElement("response/lst[@name='shards.info']");
             if (rootNode != null)
                 results.ShardInfoResults = ParseDocuments(rootNode).ToList();
         }
