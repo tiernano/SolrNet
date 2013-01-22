@@ -19,6 +19,7 @@ namespace SolrNet.Impl.ResponseParsers
 
         public void Parse(XDocument xml, SolrQueryResults<T> results)
         {
+
             var rootNode = xml.XPathSelectElement("response/lst[@name='shards.info']");
             if (rootNode != null)
                 results.ShardInfoResults = ParseDocuments(rootNode).ToList();
